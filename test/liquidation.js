@@ -1,3 +1,4 @@
+require('dotenv').config(); 
 const { expect } = require("chai");
 const { network, ethers } = require("hardhat");
 const { BigNumber, utils }  = require("ethers");
@@ -9,7 +10,7 @@ describe("Liquidation", function () {
         method: "hardhat_reset",
         params: [{
           forking: {
-            jsonRpcUrl: process.env.ALCHE_API,
+            jsonRpcUrl: process.env.MAINNET_RPC_URL,
             blockNumber: 12489619,
           }
         }]
